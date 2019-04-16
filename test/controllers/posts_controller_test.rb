@@ -17,12 +17,17 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create post" do
     assert_difference('Post.count') do
-      post posts_url, params: { post: { body: @post.body, title: @post.title } }
+      post posts_url, params: { post: { Author: @post.Author, Body: @post.Body, Title: @post.Title } }
     end
 
     assert_redirected_to post_url(Post.last)
   end
 
+  test "Should not create comment without title" do
+    post = Post.new
+    assert_not post.create, "created the post without a title"
+  end
+  
   test "should show post" do
     get post_url(@post)
     assert_response :success
@@ -34,7 +39,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update post" do
-    patch post_url(@post), params: { post: { body: @post.body, title: @post.title } }
+    patch post_url(@post), params: { post: { Author: @post.Author, Body: @post.Body, Title: @post.Title } }
     assert_redirected_to post_url(@post)
   end
 

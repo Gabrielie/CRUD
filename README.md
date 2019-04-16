@@ -1,11 +1,9 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-#Najiang An Assignent 3.
-
-#I was only able to accomplish minor steps due to the fact that I couldn't set up ruby on rails on my laptop, and my ruby on rails on Cloud 9 isn't working correctly as well, I'm not able preview or run my application on cloud 9, so I'm not really sure is everything working or not.
-# 01. I scaffold the app to create a post-comment application.
-# 02. I set-up a default homepage for the app by setting up a page controller, and add routes for it.
-# 03. Add content to the index page.
-# 04. Try to generate a article method, but seems that it failed.
+#for This Assignmen. I create two object, posts and comments.
+#The Variables that I was using are String, text, and integer.
+#The comments belongs under each posts. and Posts can have many comments.
+#I did CRUD to each objects.
+#I've posted the project on github
+#The default homepage was set up to show the list of posts
+#Validations was added so users can not leave an empty post or comment.
+#There were originall some of the tests created with the scaffold, I added two tests for the post and comment controllers, about the app should not save a comment without author's name and should not save a post without the title.
+#I tried to include some Bootstrap, but when even I did it the whole application crush down, so I didn't use it in the version that I turned in.
